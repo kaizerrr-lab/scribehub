@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScribeHub | Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="editor-body">
+    <nav class="editor-nav">
+        <a href="admin.html">← Back to Admin</a>
+        <div class="editor-nav-right">
+            <span id="autosave-indicator" class="autosave-indicator"></span>
+            <button id="publish-btn" class="btn-action">Save Options</button>
+        </div>
+    </nav>
+    <div class="editor-stats-bar">
+        <span id="editor-word-count">0 words</span>
+        <span class="editor-stats-sep">•</span>
+        <span id="editor-char-count">0 chars</span>
+        <span class="editor-stats-sep">•</span>
+        <span id="editor-read-time">~0 min read</span>
+    </div>
+    <main class="editor-container">
+        <input type="text" id="editor-title-input" class="editor-title" placeholder="Post Title...">
+        <textarea id="editor-content-input" class="editor-content" placeholder="Start writing your draft here...&#10;&#10;Separate paragraphs with a blank line.&#10;Wrap text in &quot;quotes&quot; to display as a blockquote."></textarea>
+    </main>
+    <div id="publish-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Publication Status</h2>
+            <p style="margin-bottom: 1rem;">Select the state for this article.</p>
+            <select id="editor-status-select" class="search-input" style="margin-bottom: 1.5rem;">
+                <option value="Published">✅ Published</option>
+                <option value="Draft">📝 Draft</option>
+            </select>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <button id="close-modal" class="btn-outline">Cancel</button>
+                <button id="confirm-publish-btn" class="btn-action">Save Changes</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
