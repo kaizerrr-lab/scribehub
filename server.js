@@ -227,9 +227,8 @@ app.get('/api/subscribers', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-
 
 if (process.env.NODE_ENV !== 'production') {
     app.listen(3000, () => console.log('Running on http://localhost:3000'));
